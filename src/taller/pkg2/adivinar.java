@@ -20,6 +20,7 @@ public class adivinar extends javax.swing.JFrame {
     int intentos = 0;
     public adivinar() {
         initComponents();
+        this.dispose();
     }
 
     /**
@@ -39,6 +40,7 @@ public class adivinar extends javax.swing.JFrame {
         lbGanador = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtIntentos = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,6 +61,13 @@ public class adivinar extends javax.swing.JFrame {
         });
 
         jLabel2.setText("Intentos");
+
+        jButton1.setText("REGRESAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,7 +93,8 @@ public class adivinar extends javax.swing.JFrame {
                         .addGap(117, 117, 117)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtIntentos)
-                            .addComponent(jLabel2))))
+                            .addComponent(jLabel2)))
+                    .addComponent(jButton1))
                 .addContainerGap(121, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -106,7 +116,9 @@ public class adivinar extends javax.swing.JFrame {
                 .addComponent(btnAdivinar)
                 .addGap(31, 31, 31)
                 .addComponent(lbGanador)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -151,6 +163,11 @@ public class adivinar extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAdivinarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Ventana_Principal devolver = new Ventana_Principal();
+        devolver.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -190,6 +207,7 @@ public class adivinar extends javax.swing.JFrame {
     private javax.swing.JTextField adivinar_numero;
     private javax.swing.JButton btnAdivinar;
     private javax.swing.JButton btnRandom;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lbGanador;
